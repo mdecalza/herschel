@@ -1,0 +1,18 @@
+{
+  "type": "gameconf",
+  "version": "1.0.0",
+  "metadata": { },
+  "data":
+  {
+    "title": "Herschel Spaceport",
+    "author": "Moustachio",
+    "description": "One MBF21 level for DOOM II with new weapons, enemies & decorations. Fend for your life on Saturn's icy moon, Mimas.",
+    "version": "1.0.2",
+    "iwad": "doom2.wad",
+    "pwadfiles": null,
+    "dehfiles": null,
+    "executable": "id24",
+	"mode": "commercial",
+    "options": null
+  }
+}

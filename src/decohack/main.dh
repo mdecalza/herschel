@@ -1,0 +1,63 @@
+/*****************************************************************************
+ * DECOHack Patch File
+ * Main
+ ****************************************************************************/
+
+#include <dsdhacked>
+#include <friendly>
+
+// Lower lost soul HP from 100 down to 40
+thing 19
+{
+	health 40
+}
+
+// Replace SS with plasma zombie
+thing 24 "Plasma Zombie"
+{
+	seesound "POSIT1"
+	deathsound "PODTH1"
+	activesound "POSACT"
+
+    // Extended Properties (Extended/DEHEXTRA feature set and later)
+	dropitem 68
+
+	// MBF21 Properties (MBF21 feature set and later)
+	projectilegroup 0
+
+	States
+	{
+		Missile:
+			SSWV E 5 A_FaceTarget
+			SSWV F 20 A_FaceTarget
+			SSWV G 2 Bright A_BspiAttack
+			SSWV F 12 A_FaceTarget
+			SSWV G 2 Bright A_BspiAttack
+			SSWV G 1 Bright A_BspiAttack
+			Goto Spawn
+	}
+}
+
+// Replace demon spawner with demon turret
+thing 27 "Demon Turret"
+{
+	States
+	{
+		
+	}
+}
+
+// Add ricochet sound to regular barrels
+thing 31 "Barrel"
+{
+	painchance 256
+
+	painsound "FRE007"
+
+	States
+	{
+		Pain:
+			BAR1 A 0 Bright A_Pain
+			Goto Spawn
+	}
+}

@@ -1,0 +1,29 @@
+map MAP01
+{
+	episode = clear
+	episode = "M_CAMP", "Herschel Spaceport", "h"
+
+	levelname = "Herschel Spaceport"
+	author = "Moustachio"
+	label = clear
+	levelpic = "CWILV00"
+	enterpic = "TITLEPIC"
+	exitpic = "TITLEPIC"
+	endgame = true
+	endpic = "CREDIT"
+	skytexture = "SKY1"
+	music = "D_RUNNIN"
+	partime = 0
+	
+	intertext = "The possessed military has ended their",
+		"demonic reign over Saturn's moon, Mimas.",
+		"",
+		"The fight is over. You've stopped the demons",
+		"from reaching the Miman underworld.",
+		"",
+		"You rock.",
+		"",
+		"Thanks for playing!"
+	interbackdrop = "MOONFLAT"
+	intermusic = "D_READ_M"
+}

@@ -1,0 +1,102 @@
+===========================================================================
+Advanced engine needed  : MBF21-compatible source port
+Primary purpose         : Single+Coop play
+===========================================================================
+Title                   : Herschel Spaceport
+Filename                : herschel.wad
+Release date            : 9/1/2021
+Author                  : Moustachio
+Other Files By Author   : atone-e5.wad
+                          crud.wad
+                          intercep2.wad; project co-leader; 14 maps (6 collabs)
+                          moonescape.wad
+                          intercep.wad; project leader; 9 maps (2 collabs)
+Misc. Author Info       : Currently finishing Atonement's fifth and final
+                          episode.
+
+
+Description             : One short, somewhat difficult MBF21 map using custom
+                          enemies, weapons, textures, sounds, and music, all
+                          trying to resemble the look and feel of vanilla Doom.
+                          Expect difficult ambushes combined with powered up
+                          weapons. The fist and chainsaw do extra damage, and
+                          almost all the guns have been modified in some way.
+                          New enemies join the fight in addition to the usual
+                          Doom II suspects.
+
+                          You land in Herschel Crater on Mimas, one of Saturn's
+                          moons. The UAC had all underground passages heavily
+                          guarded, but it looks like that backfired on them. The
+                          demons used the UAC's technology to mutate and conquer
+                          the moon base. It's swarming with demons, and it's the
+                          only passage to the Miman underworld... Stop them
+                          before they take over the whole solar system!
+
+
+Additional Credits to   : All the custom resource authors I (lovingly) borrowed
+                          from. More detailed credits are contained in a
+                          separate text file, rescreds.txt.
+                          Nikku4211, Biodegradable, Armolitskiy, Argent Agent,
+                          and galileo31dos01 for feedback.
+===========================================================================
+* Version 1.0.1 *
+
+- Renamed RESCREDS lump to CREDITS.
+- Updated UMAPINFO to declare the level as a new episode.
+- Added M_CAMP graphic for episode selection menu.
+- Added GAMECONF lump for Bethesda.net release.
+- Made a proper CREDIT pic that displays between demos and after the ending.
+
+
+* What is included *
+
+New levels              : 1
+Sounds                  : Yes
+Music                   : Yes
+Graphics                : Yes
+Dehacked/BEX Patch      : Yes
+Demos                   : No
+Other                   : UMAPINFO, MBF21 OPTIONS, GAMEINFO
+Other files required    : None
+
+
+* Play Information *
+
+Game                    : DOOM2
+Map #                   : MAP01
+Single Player           : Designed for
+Cooperative 2-4 Player  : Designed for
+Deathmatch 2-4 Player   : No
+Other game styles       : None
+Difficulty Settings     : Yes
+
+
+* Construction *
+
+Base                    : New from scratch
+Build Time              : 2 weeks on and off
+Editor(s) used          : Ultimate Doom Builder, SLADE 3.2.0 beta, paint.net,
+                          FL Studio 20
+Known Bugs              : None
+May Not Run With        : Ports that do not support MBF21, DEHEXTRA,
+                          and UMAPINFO
+Tested With             : DSDA-Doom 0.24.3 on complevel 21
+
+
+
+* Copyright / Permissions *
+
+This work is licensed under the Creative Commons Attribution 4.0
+International License. To view a copy of this license, visit
+http://creativecommons.org/licenses/by/4.0/
+
+You are free to copy and redistribute the material in any medium or format;
+and remix, transform, and build upon the material for any purpose, even
+commercially. If you do so, you must give appropriate credit, provide a link
+to the license, and indicate if changes were made. You may do so in any
+reasonable manner, but not in any way that suggests the licensor endorses you
+or your use.
+
+* Where to get the file that this text file describes *
+
+The Usual: ftp://archives.gamers.org/pub/idgames/ and mirrors
