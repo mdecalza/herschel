@@ -1,6 +1,7 @@
 Patch File for DeHackEd v3.0
 # Created with WhackEd4 1.2.4 BETA
 # Note: Use the pound sign ('#') to start comment lines.
+# Old DEH file manually written by Matthew "Moustachio" DeCalzadilla.
 
 Doom version = 21
 Patch format = 6
