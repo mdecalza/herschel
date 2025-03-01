@@ -1,0 +1,220 @@
+/*****************************************************************************
+ * DECOHack Patch File
+ * Enemies
+ * Matthew "Moustachio" DeCalzadilla 2025
+ ****************************************************************************/
+
+#include <dsdhacked>
+
+// Lower lost soul HP from 100 down to 40
+thing 19 "Lost soul"
+{
+	health 40
+}
+
+// Replace SS with plasma zombie
+thing 24 "Plasma zombie"
+{
+	seesound "POSIT1"
+	deathsound "PODTH1"
+	activesound "POSACT"
+
+    // Extended Properties (Extended/DEHEXTRA feature set and later)
+	dropitem 68
+
+	// MBF21 Properties (MBF21 feature set and later)
+	projectilegroup 0
+
+	States
+	{
+		Missile:
+			SSWV EEEEE 5 A_FaceTarget
+			SSWV F 2 Bright A_BspiAttack
+			SSWV E 12 A_FaceTarget
+			SSWV F 2 Bright A_BspiAttack
+			SSWV F 1 Bright A_BspiAttack
+			Goto See
+	}
+}
+
+// Replace demon spawner with demon turret
+thing 27 "Demon turret"
+{
+	health 200
+	radius 16
+	height 64
+	mass 100000
+
+	seesound "FRE000"
+	deathsound "FRE001"
+
+	// Flags
+	+COUNTKILL
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+
+	-NOSECTOR
+	-NOBLOCKMAP
+
+	// MBF21 Flags (MBF21 feature set only)
+	+SHORTMRANGE
+	+DMGIGNORED
+	+NORADIUSDMG
+
+	// MBF21 Properties (MBF21 feature set and later)
+	projectilegroup 0
+
+	States
+	{
+		Spawn:
+			SP97 I 10 A_Look
+			Loop
+		FirstSight:
+			SP97 H 20 Bright
+			SP97 G 3 Bright
+			SP97 F 2 Bright
+			Goto See
+		See:
+			SP97 A 4 Bright {
+				A_Chase
+				A_PlaySound("FRE004")
+			}
+			SP97 BCDABC 4 Bright
+			Loop
+		Missile:
+			SP97 F 20 Bright {
+				A_PlaySound("FRE002")
+				A_FaceTarget
+			}
+			SP97 GG 5 Bright A_BspiAttack
+			SP97 H 3 Bright A_BspiAttack
+			SP97 I 3 Bright
+			SP97 I 75
+			SP97 IHF 3 Bright
+			Goto See
+		Pain:
+			SP97 E 4 Bright A_Pain
+			Goto See
+		Death:
+			SP97 E 15 Bright A_Scream
+			SP97 G 4 Bright A_Fall
+			SP97 H 4 Bright
+			SP97 J 10 Bright
+			SP97 K 10 Bright A_Explode
+			SP97 L 10 Bright
+			SP97 M -1
+			Stop
+	}
+}
+
+thing 246 "Rocket zombie"
+{
+	ednum 6095
+
+	health 60
+	reactiontime 8
+	painchance 170
+	speed 8
+	radius 20
+	height 56
+	mass 100
+
+	seesound "FRE010"
+	painsound "FRE013"
+	deathsound "FRE014"
+	activesound "FRE009"
+
+	// Flags
+	+COUNTKILL
+	+SOLID
+	+SHOOTABLE
+
+    // Extended Properties (Extended/DEHEXTRA feature set and later)
+	dropitem 66
+
+	// MBF21 Flags (MBF21 feature set only)
+	+SHORTMRANGE
+	+NORADIUSDMG
+
+	States
+	{
+		Spawn:
+			SP95 AB 10 A_Look
+			Loop
+		See:
+			SP95 AABBCCDD 3 A_Chase
+			Loop
+		Missile:
+			SP95 E 6 Bright A_FaceTarget
+			SP95 E 6 A_FaceTarget
+			SP95 E 6 Bright A_FaceTarget
+			SP95 E 6 A_FaceTarget
+			SP95 E 6 Bright A_FaceTarget
+			SP95 E 5 A_FaceTarget
+			SP95 F 10 Bright A_CyberAttack
+			SP95 E 10
+			Goto See
+		Pain:
+			SP95 G 3
+			SP95 G 3 A_Pain
+			Goto See
+		Death:
+			SP95 H 10
+			SP95 I 10 A_Scream
+			SP95 J 10
+			SP95 K 10 A_Fall
+			SP95 LM 10
+			SP95 N -1
+			Stop
+		XDeath:
+			SP95 OPQRSTUV 5
+			SP95 W -1
+			Stop
+		Raise:
+			SP95 KJIH 5
+			Goto See
+	}
+}
+
+// Clone imp into Winged imp
+thing 247 : thing 12 "Winged imp"
+{
+	ednum 6096
+
+	// Flags
+	+FLOAT
+
+	// MBF21 Flags
+	+LOGRAV
+
+	States
+	{
+		Spawn:
+			SP96 AB 10 A_Look
+			Loop
+		See:
+			SP96 AABBCCDD 3 A_Chase
+			Loop
+		Melee:
+		Missile:
+			SP96 EEF 8 A_FaceTarget
+			SP96 G 6 A_TroopAttack
+			Goto See
+		Pain:
+			SP96 H 2
+			SP96 H 2 A_Pain
+			Goto See
+		Death:
+			SP96 I 8
+			SP96 J 8 A_Scream
+			SP96 K 6
+			SP96 L 6 A_Fall
+			SP96 M -1
+			Stop
+		Raise:
+			SP96 ML 8
+			SP96 KJI 6
+			Goto See
+	}
+}
